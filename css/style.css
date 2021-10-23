@@ -315,7 +315,7 @@ body {
 .landing .animation .bush1 img {
   position: absolute;
   bottom: 55px;
-  left: 8%;
+  left: 10%;
   width: 35%;
   -webkit-transform-origin: bottom right;
           transform-origin: bottom right;
@@ -346,7 +346,7 @@ body {
 .landing .animation .bush2 img {
   position: absolute;
   bottom: 47px;
-  right: 4%;
+  right: 6%;
   width: 35%;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
