@@ -296,7 +296,9 @@ body {
 .landing .animation .ground .ground-line {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   height: 2px;
   width: 100%;
   background-color: #3f3350;
@@ -308,7 +310,8 @@ body {
 }
 
 .landing .animation .ground .ground-line.start {
-  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 0%;
 }
 
@@ -439,6 +442,8 @@ body {
   transition: .5s;
   -webkit-transition-delay: 2.5s;
           transition-delay: 2.5s;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
   -webkit-animation-name: tree-mid-move;
           animation-name: tree-mid-move;
   -webkit-animation-delay: 3.5s;
@@ -451,7 +456,8 @@ body {
 }
 
 .landing .animation .tree-mid img.start {
-  left: 60%;
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
   opacity: 0;
 }
 
@@ -651,8 +657,8 @@ body {
   bottom: -1px;
   left: 56%;
   z-index: 11;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0px);
+          transform: translate(-50%, 0px);
   -webkit-transition: .5s;
   transition: .5s;
   -webkit-transition-delay: 2s;
@@ -670,7 +676,8 @@ body {
 }
 
 .landing .animation .armadillo .house.start {
-  bottom: -280px;
+  -webkit-transform: translate(-50%, 280px);
+          transform: translate(-50%, 280px);
 }
 
 .landing .animation .sun {
@@ -689,7 +696,8 @@ body {
 }
 
 .landing .animation .sun.start {
-  top: 450px;
+  -webkit-transform: translateY(450px);
+          transform: translateY(450px);
 }
 
 .landing .animation .sun img {
@@ -939,31 +947,39 @@ body {
 
 @-webkit-keyframes house-move {
   0% {
-    bottom: 0px;
+    -webkit-transform: translate(-50%, 0px);
+            transform: translate(-50%, 0px);
   }
   20% {
-    bottom: 12px;
+    -webkit-transform: translate(-50%, -12px);
+            transform: translate(-50%, -12px);
   }
   60% {
-    bottom: -6px;
+    -webkit-transform: translate(-50%, 6px);
+            transform: translate(-50%, 6px);
   }
   100% {
-    bottom: 0px;
+    -webkit-transform: translate(-50%, 0px);
+            transform: translate(-50%, 0px);
   }
 }
 
 @keyframes house-move {
   0% {
-    bottom: 0px;
+    -webkit-transform: translate(-50%, 0px);
+            transform: translate(-50%, 0px);
   }
   20% {
-    bottom: 12px;
+    -webkit-transform: translate(-50%, -12px);
+            transform: translate(-50%, -12px);
   }
   60% {
-    bottom: -6px;
+    -webkit-transform: translate(-50%, 6px);
+            transform: translate(-50%, 6px);
   }
   100% {
-    bottom: 0px;
+    -webkit-transform: translate(-50%, 0px);
+            transform: translate(-50%, 0px);
   }
 }
 

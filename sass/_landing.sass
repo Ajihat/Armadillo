@@ -173,7 +173,8 @@ body
             .ground-line
                 position: absolute
                 top: 0
-                left: 0
+                left: 50%
+                transform: translateX(-50%)
                 height: 2px
                 width: 100%
                 background-color: $main-font
@@ -181,7 +182,7 @@ body
                 transition: 1s
                 transition-delay: .5s
                 &.start
-                    left: 50%
+                    transform: translateX(-50%)
                     width: 0%
         .bush1
             img
@@ -261,13 +262,14 @@ body
                 opacity: 1
                 transition: .5s
                 transition-delay: 2.5s
+                transform: translateX(0px)
                 animation-name: tree-mid-move
                 animation-delay: 3.5s
                 animation-duration: 1s
                 animation-timing-function: ease-out
                 z-index: 1
                 &.start
-                    left: 60%
+                    transform: translateX(-300px)
                     opacity: 0
         .tree2
             img
@@ -395,7 +397,7 @@ body
                 bottom: -1px
                 left: 56%
                 z-index: 11
-                transform: translate(-50%,0)
+                transform: translate(-50%, 0px)
                 transition: .5s
                 transition-delay: 2s
                 transition-timing-function: linear
@@ -404,7 +406,7 @@ body
                 animation-duration: .7s
                 animation-delay: 3.5s
                 &.start
-                    bottom: -280px
+                    transform: translate(-50%, 280px)
         .sun
             position: absolute
             width: 270px
@@ -417,7 +419,7 @@ body
             transition: .8s
             transition-delay: 2.6s
             &.start
-                top: 450px
+                transform: translateY(450px)
             img
                 position: relative
                 z-index: 3
@@ -499,13 +501,13 @@ body
 
 @keyframes house-move
     0%
-        bottom: 0px
+        transform: translate(-50%, 0px)
     20%
-        bottom: 12px
+        transform: translate(-50%, -12px)
     60%
-        bottom: -6px
+        transform: translate(-50%, 6px)
     100%
-        bottom: 0px
+        transform: translate(-50%, 0px)
 
 @keyframes tree-move
     0%
