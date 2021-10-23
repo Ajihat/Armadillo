@@ -18,13 +18,13 @@ const animationItems = [groundLine, bush1, bush2, armadillo, house, tree1, small
 
 
 
-window.addEventListener('load', function () {              // Strona całkowicie wczytana
+window.addEventListener('load', function () {              // Fully loaded website
     console.log("Loaded")
     loader.style.display = "none"
 
 
 
-    setTimeout(function () {                   // Pojawienie się animacji
+    setTimeout(function () {                   // Start of animation
         nav.classList.remove("hidden")
         animationItems.forEach(item => {
             item.classList.remove("start")
