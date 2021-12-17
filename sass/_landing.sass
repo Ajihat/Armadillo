@@ -17,6 +17,7 @@ body
         height: 100px
         transition: top .3s
         top: 0
+        z-index: 30
         &.hidden
             top: -100px
         &.fixed
@@ -123,7 +124,8 @@ body
         padding: 150px 40px 0px 40px
         opacity: 1
         transition: 1s
-        transition-delay: 3s
+        transition-delay: 3.8s
+        z-index: 3
         &.start
             opacity: 0
         h1
@@ -132,6 +134,7 @@ body
         p
             font: 400 22px/1.8 'Inter', sans-serif
         button
+            position: relative
             margin-top: 30px
             display: inline-block
             background-color: $orange
@@ -142,6 +145,7 @@ body
             box-shadow: 0px 0px 55px -14px rgba(255, 112, 67, 1)
             cursor: pointer
             transition: .5s
+            z-index: 4
             &:hover
                 background-color: $main-font
             img
@@ -162,6 +166,7 @@ body
         margin: 0 auto
         overflow-y: hidden
         overflow-x: visible
+        bottom: 40px
         .ground
             position: absolute
             height: 80px
@@ -191,17 +196,16 @@ body
                 left: 10%
                 width: 35%
                 transform-origin: bottom right
-                transition: .5s
-                transition-delay: 1.5s
-                transition-timing-function: linear
-                animation-timing-function: ease-out
+                animation-timing-function: cubic-bezier(.23,.88,.76,1.03)
                 animation-name: bush-move
-                animation-delay: 3s
+                animation-delay: 2s
                 animation-duration: 1.5s
+                animation-fill-mode: forwards
+                transform: rotate(-90deg)
                 z-index: 1
-                transform: rotate(0deg)
                 &.start
-                    transform: rotate(-90deg)
+                    animation: none
+
         .bush2
             img
                 position: absolute
@@ -209,17 +213,15 @@ body
                 right: 6%
                 width: 35%
                 transform-origin: bottom left
-                transition: .5s
-                transition-delay: 1.9s
-                transition-timing-function: linear
                 animation-name: bush-move2
-                animation-delay: 3.4s
-                animation-duration: 1s
-                animation-timing-function: ease-out
+                animation-delay: 2.4s
+                animation-duration: 1.5s
+                animation-fill-mode: forwards
+                animation-timing-function: cubic-bezier(.23,.88,.76,1.03)
                 z-index: 1
-                transform: rotate(0deg)
+                transform: rotate(90deg)
                 &.start
-                    transform: rotate(90deg)
+                    animation: none
         .tree1
             img
                 position: absolute
@@ -227,17 +229,15 @@ body
                 bottom: 70px
                 left: 15%
                 transform-origin: bottom
-                transition: .5s
-                transition-delay: 2.3s
-                transition-timing-function: linear
                 animation-name: tree-move
-                animation-delay: 3.8s
+                animation-delay: 3s
                 animation-duration: 1.5s
-                animation-timing-function: ease-out
+                animation-timing-function: cubic-bezier(.23,.88,.76,1.03)
+                animation-fill-mode: forwards
                 z-index: 2
-                transform: rotate(0deg)
+                transform: rotate(-125deg)
                 &.start
-                    transform: rotate(-125deg)
+                    animation: none
         .smallbush1
             img
                 position: absolute
@@ -247,7 +247,7 @@ body
                 transform: rotate(0deg)
                 transform-origin: bottom
                 transition: 1s
-                transition-delay: 2.9s
+                transition-delay: 3.5s
                 transform: rotate(0deg)
                 z-index: 3
                 &.start
@@ -261,12 +261,8 @@ body
                 transform-origin: bottom
                 opacity: 1
                 transition: .5s
-                transition-delay: 2.5s
+                transition-delay: 3.6s
                 transform: translateX(0px)
-                animation-name: tree-mid-move
-                animation-delay: 3.5s
-                animation-duration: 1s
-                animation-timing-function: ease-out
                 z-index: 1
                 &.start
                     transform: translateX(-300px)
@@ -278,16 +274,15 @@ body
                 bottom: 70px
                 right: 11%
                 transform-origin: bottom
-                transition: .5s
-                transform: rotate(0deg)
-                transition-delay: 2.6s
                 animation-name: tree-move
-                animation-delay: 4.1s
+                animation-delay: 2.8s
                 animation-duration: 1.5s
-                animation-timing-function: ease-out
+                animation-fill-mode: forwards
+                animation-timing-function: cubic-bezier(.23,.88,.76,1.03)
+                transform: rotate(-120deg)
                 z-index: 2
                 &.start
-                    transform: rotate(-120deg)
+                    animation: none
         .bcg
             img
                 position: absolute
@@ -397,16 +392,15 @@ body
                 bottom: -1px
                 left: 56%
                 z-index: 11
-                transform: translate(-50%, 0px)
-                transition: .5s
-                transition-delay: 2s
-                transition-timing-function: linear
                 transform-origin: bottom
                 animation-name: house-move
-                animation-duration: .7s
-                animation-delay: 3.5s
+                animation-duration: 1s
+                animation-delay: 2.4s
+                animation-fill-mode: forwards
+                animation-timing-function: cubic-bezier(.23,.88,.76,1.03)
+                transform: translate(-50%, 280px)
                 &.start
-                    transform: translate(-50%, 280px)
+                    animation: none
         .sun
             position: absolute
             width: 270px
@@ -447,25 +441,25 @@ body
 
 @keyframes bush-move
     0%
-        transform: rotate(0deg)
-    20%
-        transform: rotate(4deg)
-    40%
-        transform: rotate(-1deg)
+        transform: rotate(-90deg)
     60%
-        transform: rotate(2deg)
+        transform: rotate(5deg)
+    75%
+        transform: rotate(0deg)
+    90%
+        transform: rotate(0deg)
     100%
         transform: rotate(0deg)
 
 @keyframes bush-move2
     0%
-        transform: rotate(0deg)
-    20%
-        transform: rotate(-3deg)
-    30%
-        transform: rotate(0deg)
+        transform: rotate(90deg)
     60%
-        transform: rotate(3deg)
+        transform: rotate(-5deg)
+    75%
+        transform: rotate(0deg)
+    90%
+        transform: rotate(0deg)
     100%
         transform: rotate(0deg)
 
@@ -501,29 +495,21 @@ body
 
 @keyframes house-move
     0%
-        transform: translate(-50%, 0px)
-    20%
-        transform: translate(-50%, -12px)
+        transform: translate(-50%, 280px)
     60%
+        transform: translate(-50%, -12px)
+    80%
         transform: translate(-50%, 6px)
     100%
         transform: translate(-50%, 0px)
 
 @keyframes tree-move
     0%
-        transform: rotate(0deg)
-    20%
-        transform: rotate(9deg)
-    75%
-        transform: rotate(-5deg)
-    100%
-        transform: rotate(0deg)
-
-@keyframes tree-mid-move
-    0%
-        transform: rotate(0deg)
+        transform: rotate(-125deg)
     50%
-        transform: rotate(12deg)
+        transform: rotate(5deg)
+    75%
+        transform: rotate(-3deg)
     100%
         transform: rotate(0deg)
 

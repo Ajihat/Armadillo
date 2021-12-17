@@ -29,7 +29,7 @@ window.addEventListener('load', function () {              // Fully loaded websi
         animationItems.forEach(item => {
             item.classList.remove("start")
         })
-    }, 1000);
+    }, 500);
 
 
 

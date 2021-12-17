@@ -25,6 +25,7 @@ body {
   -webkit-transition: top .3s;
   transition: top .3s;
   top: 0;
+  z-index: 30;
 }
 
 .landing nav.hidden {
@@ -223,8 +224,9 @@ body {
   opacity: 1;
   -webkit-transition: 1s;
   transition: 1s;
-  -webkit-transition-delay: 3s;
-          transition-delay: 3s;
+  -webkit-transition-delay: 3.8s;
+          transition-delay: 3.8s;
+  z-index: 3;
 }
 
 .landing .motto.start {
@@ -241,6 +243,7 @@ body {
 }
 
 .landing .motto button {
+  position: relative;
   margin-top: 30px;
   display: inline-block;
   background-color: #ff7043;
@@ -253,6 +256,7 @@ body {
   cursor: pointer;
   -webkit-transition: .5s;
   transition: .5s;
+  z-index: 4;
 }
 
 .landing .motto button:hover {
@@ -281,6 +285,7 @@ body {
   margin: 0 auto;
   overflow-y: hidden;
   overflow-x: visible;
+  bottom: 40px;
 }
 
 .landing .animation .ground {
@@ -322,28 +327,24 @@ body {
   width: 35%;
   -webkit-transform-origin: bottom right;
           transform-origin: bottom right;
-  -webkit-transition: .5s;
-  transition: .5s;
-  -webkit-transition-delay: 1.5s;
-          transition-delay: 1.5s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
+  -webkit-animation-timing-function: cubic-bezier(0.23, 0.88, 0.76, 1.03);
+          animation-timing-function: cubic-bezier(0.23, 0.88, 0.76, 1.03);
   -webkit-animation-name: bush-move;
           animation-name: bush-move;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
   z-index: 1;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
 }
 
 .landing .animation .bush1 img.start {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  -webkit-animation: none;
+          animation: none;
 }
 
 .landing .animation .bush2 img {
@@ -353,28 +354,24 @@ body {
   width: 35%;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transition: .5s;
-  transition: .5s;
-  -webkit-transition-delay: 1.9s;
-          transition-delay: 1.9s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
   -webkit-animation-name: bush-move2;
           animation-name: bush-move2;
-  -webkit-animation-delay: 3.4s;
-          animation-delay: 3.4s;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.23, 0.88, 0.76, 1.03);
+          animation-timing-function: cubic-bezier(0.23, 0.88, 0.76, 1.03);
   z-index: 1;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .landing .animation .bush2 img.start {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  -webkit-animation: none;
+          animation: none;
 }
 
 .landing .animation .tree1 img {
@@ -384,28 +381,24 @@ body {
   left: 15%;
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
-  -webkit-transition: .5s;
-  transition: .5s;
-  -webkit-transition-delay: 2.3s;
-          transition-delay: 2.3s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
   -webkit-animation-name: tree-move;
           animation-name: tree-move;
-  -webkit-animation-delay: 3.8s;
-          animation-delay: 3.8s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
+  -webkit-animation-timing-function: cubic-bezier(0.23, 0.88, 0.76, 1.03);
+          animation-timing-function: cubic-bezier(0.23, 0.88, 0.76, 1.03);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   z-index: 2;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  -webkit-transform: rotate(-125deg);
+          transform: rotate(-125deg);
 }
 
 .landing .animation .tree1 img.start {
-  -webkit-transform: rotate(-125deg);
-          transform: rotate(-125deg);
+  -webkit-animation: none;
+          animation: none;
 }
 
 .landing .animation .smallbush1 img {
@@ -419,8 +412,8 @@ body {
           transform-origin: bottom;
   -webkit-transition: 1s;
   transition: 1s;
-  -webkit-transition-delay: 2.9s;
-          transition-delay: 2.9s;
+  -webkit-transition-delay: 3.5s;
+          transition-delay: 3.5s;
   transform: rotate(0deg);
   z-index: 3;
 }
@@ -440,18 +433,10 @@ body {
   opacity: 1;
   -webkit-transition: .5s;
   transition: .5s;
-  -webkit-transition-delay: 2.5s;
-          transition-delay: 2.5s;
+  -webkit-transition-delay: 3.6s;
+          transition-delay: 3.6s;
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
-  -webkit-animation-name: tree-mid-move;
-          animation-name: tree-mid-move;
-  -webkit-animation-delay: 3.5s;
-          animation-delay: 3.5s;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
   z-index: 1;
 }
 
@@ -468,26 +453,24 @@ body {
   right: 11%;
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
-  -webkit-transition: .5s;
-  transition: .5s;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -webkit-transition-delay: 2.6s;
-          transition-delay: 2.6s;
   -webkit-animation-name: tree-move;
           animation-name: tree-move;
-  -webkit-animation-delay: 4.1s;
-          animation-delay: 4.1s;
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.23, 0.88, 0.76, 1.03);
+          animation-timing-function: cubic-bezier(0.23, 0.88, 0.76, 1.03);
+  -webkit-transform: rotate(-120deg);
+          transform: rotate(-120deg);
   z-index: 2;
 }
 
 .landing .animation .tree2 img.start {
-  -webkit-transform: rotate(-120deg);
-          transform: rotate(-120deg);
+  -webkit-animation: none;
+          animation: none;
 }
 
 .landing .animation .bcg img {
@@ -657,27 +640,25 @@ body {
   bottom: -1px;
   left: 56%;
   z-index: 11;
-  -webkit-transform: translate(-50%, 0px);
-          transform: translate(-50%, 0px);
-  -webkit-transition: .5s;
-  transition: .5s;
-  -webkit-transition-delay: 2s;
-          transition-delay: 2s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
   -webkit-animation-name: house-move;
           animation-name: house-move;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
-  -webkit-animation-delay: 3.5s;
-          animation-delay: 3.5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.23, 0.88, 0.76, 1.03);
+          animation-timing-function: cubic-bezier(0.23, 0.88, 0.76, 1.03);
+  -webkit-transform: translate(-50%, 280px);
+          transform: translate(-50%, 280px);
 }
 
 .landing .animation .armadillo .house.start {
-  -webkit-transform: translate(-50%, 280px);
-          transform: translate(-50%, 280px);
+  -webkit-animation: none;
+          animation: none;
 }
 
 .landing .animation .sun {
@@ -741,20 +722,20 @@ body {
 
 @-webkit-keyframes bush-move {
   0% {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  60% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  75% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-  20% {
-    -webkit-transform: rotate(4deg);
-            transform: rotate(4deg);
-  }
-  40% {
-    -webkit-transform: rotate(-1deg);
-            transform: rotate(-1deg);
-  }
-  60% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
+  90% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(0deg);
@@ -764,20 +745,20 @@ body {
 
 @keyframes bush-move {
   0% {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  60% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  75% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-  20% {
-    -webkit-transform: rotate(4deg);
-            transform: rotate(4deg);
-  }
-  40% {
-    -webkit-transform: rotate(-1deg);
-            transform: rotate(-1deg);
-  }
-  60% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
+  90% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(0deg);
@@ -787,20 +768,20 @@ body {
 
 @-webkit-keyframes bush-move2 {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  20% {
-    -webkit-transform: rotate(-3deg);
-            transform: rotate(-3deg);
-  }
-  30% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   60% {
-    -webkit-transform: rotate(3deg);
-            transform: rotate(3deg);
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  75% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  90% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(0deg);
@@ -810,20 +791,20 @@ body {
 
 @keyframes bush-move2 {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  20% {
-    -webkit-transform: rotate(-3deg);
-            transform: rotate(-3deg);
-  }
-  30% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   60% {
-    -webkit-transform: rotate(3deg);
-            transform: rotate(3deg);
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  75% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  90% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(0deg);
@@ -947,14 +928,14 @@ body {
 
 @-webkit-keyframes house-move {
   0% {
-    -webkit-transform: translate(-50%, 0px);
-            transform: translate(-50%, 0px);
+    -webkit-transform: translate(-50%, 280px);
+            transform: translate(-50%, 280px);
   }
-  20% {
+  60% {
     -webkit-transform: translate(-50%, -12px);
             transform: translate(-50%, -12px);
   }
-  60% {
+  80% {
     -webkit-transform: translate(-50%, 6px);
             transform: translate(-50%, 6px);
   }
@@ -966,14 +947,14 @@ body {
 
 @keyframes house-move {
   0% {
-    -webkit-transform: translate(-50%, 0px);
-            transform: translate(-50%, 0px);
+    -webkit-transform: translate(-50%, 280px);
+            transform: translate(-50%, 280px);
   }
-  20% {
+  60% {
     -webkit-transform: translate(-50%, -12px);
             transform: translate(-50%, -12px);
   }
-  60% {
+  80% {
     -webkit-transform: translate(-50%, 6px);
             transform: translate(-50%, 6px);
   }
@@ -985,16 +966,16 @@ body {
 
 @-webkit-keyframes tree-move {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotate(-125deg);
+            transform: rotate(-125deg);
   }
-  20% {
-    -webkit-transform: rotate(9deg);
-            transform: rotate(9deg);
+  50% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
   }
   75% {
-    -webkit-transform: rotate(-5deg);
-            transform: rotate(-5deg);
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
   }
   100% {
     -webkit-transform: rotate(0deg);
@@ -1004,46 +985,16 @@ body {
 
 @keyframes tree-move {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotate(-125deg);
+            transform: rotate(-125deg);
   }
-  20% {
-    -webkit-transform: rotate(9deg);
-            transform: rotate(9deg);
+  50% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
   }
   75% {
-    -webkit-transform: rotate(-5deg);
-            transform: rotate(-5deg);
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-
-@-webkit-keyframes tree-mid-move {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  50% {
-    -webkit-transform: rotate(12deg);
-            transform: rotate(12deg);
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-
-@keyframes tree-mid-move {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  50% {
-    -webkit-transform: rotate(12deg);
-            transform: rotate(12deg);
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
   }
   100% {
     -webkit-transform: rotate(0deg);
