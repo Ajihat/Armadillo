@@ -9,7 +9,6 @@ body
     max-width: 1980px
     margin: 0 auto
 .landing
-    height: 120vh
     background-color: $beige
     nav
         position: absolute
@@ -123,9 +122,9 @@ body
         margin: 0 auto
         padding: 150px 40px 0px 40px
         opacity: 1
-        transition: 1s
+        transition: 1.5s
         transition-delay: 3.8s
-        z-index: 3
+        z-index: 4
         &.start
             opacity: 0
         h1
@@ -438,7 +437,24 @@ body
         top: 50%
         left: 50%
         transform: translate(-50%,-50%)
-
+    .what-is
+        position: fixed
+        bottom: 20%
+        left: 4%
+        z-index: 99
+        cursor: pointer
+        transition: 1.5s
+        transition-delay: 3.8s
+        &.start
+            opacity: 0
+        &:hover img:last-child
+            opacity: 0
+        img
+            position: absolute
+            top: 0
+            left: 0
+            width: 110px
+            transition: .3s
 @keyframes bush-move
     0%
         transform: rotate(-90deg)
