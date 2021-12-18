@@ -11,6 +11,7 @@ body {
   width: 100%;
   max-width: 1980px;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .landing {
@@ -1125,7 +1126,7 @@ body {
     left: 0;
   }
   100% {
-    left: 100%;
+    left: calc( 100% + 210px);
   }
 }
 
@@ -1134,7 +1135,7 @@ body {
     left: 0;
   }
   100% {
-    left: 100%;
+    left: calc( 100% + 210px);
   }
 }
 /*# sourceMappingURL=style.css.map */
