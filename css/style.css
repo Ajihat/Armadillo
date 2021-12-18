@@ -280,7 +280,7 @@ body {
   -webkit-transform: scaleX(-1) translateX(100%);
           transform: scaleX(-1) translateX(100%);
   width: 210px;
-  bottom: 250px;
+  top: 490px;
   -webkit-animation-name: birds-move;
           animation-name: birds-move;
   -webkit-animation-timing-function: linear;
@@ -291,8 +291,8 @@ body {
           animation-duration: 30s;
   -webkit-animation-delay: 5s;
           animation-delay: 5s;
-  left: 0px;
-  z-index: 100;
+  left: 0;
+  z-index: 3;
 }
 
 .landing .motto .birds.start {
