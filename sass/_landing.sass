@@ -156,6 +156,20 @@ body
             span
                 color: white
                 font-size: 20px
+        .birds
+            position: absolute
+            transform: scaleX(-1) translateX(100%)
+            width: 210px
+            bottom: 250px
+            animation-name: birds-move
+            animation-timing-function: linear
+            animation-iteration-count: infinite
+            animation-duration: 30s
+            animation-delay: 5s
+            left: 0px
+            z-index: 100
+            &.start
+                animation: none
     .animation
         position: relative
         max-width: 1400px
@@ -188,6 +202,18 @@ body
                 &.start
                     transform: translateX(-50%)
                     width: 0%
+            .check
+                display: flex
+                justify-content: space-between
+                align-items: flex-end
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-65%,-50%)
+                font-size: 18px
+                img
+                    transform: rotate(140deg)
+                    width: 50px
         .bush1
             img
                 position: absolute
@@ -440,7 +466,7 @@ body
     .what-is
         position: fixed
         bottom: 20%
-        left: 4%
+        left: 3%
         z-index: 99
         cursor: pointer
         transition: 1.5s
@@ -540,3 +566,9 @@ body
         height: 265px
         width: 265px
         opacity: 0
+
+@keyframes birds-move
+    0%
+        left: 0
+    100%
+        left: 100%

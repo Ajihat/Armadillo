@@ -275,6 +275,31 @@ body {
   font-size: 20px;
 }
 
+.landing .motto .birds {
+  position: absolute;
+  -webkit-transform: scaleX(-1) translateX(100%);
+          transform: scaleX(-1) translateX(100%);
+  width: 210px;
+  bottom: 250px;
+  -webkit-animation-name: birds-move;
+          animation-name: birds-move;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  left: 0px;
+  z-index: 100;
+}
+
+.landing .motto .birds.start {
+  -webkit-animation: none;
+          animation: none;
+}
+
 .landing .animation {
   position: relative;
   max-width: 1400px;
@@ -317,6 +342,30 @@ body {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 0%;
+}
+
+.landing .animation .ground .check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-65%, -50%);
+          transform: translate(-65%, -50%);
+  font-size: 18px;
+}
+
+.landing .animation .ground .check img {
+  -webkit-transform: rotate(140deg);
+          transform: rotate(140deg);
+  width: 50px;
 }
 
 .landing .animation .bush1 img {
@@ -722,7 +771,7 @@ body {
 .landing .what-is {
   position: fixed;
   bottom: 20%;
-  left: 4%;
+  left: 3%;
   z-index: 99;
   cursor: pointer;
   -webkit-transition: 1.5s;
@@ -1059,6 +1108,24 @@ body {
     height: 265px;
     width: 265px;
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes birds-move {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes birds-move {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

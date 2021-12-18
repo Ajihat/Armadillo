@@ -13,7 +13,8 @@ const bcg = document.querySelector(".bcg img");
 const clouds = document.querySelector(".clouds img");
 const loader = document.querySelector(".loader");
 const whatIs = document.querySelector(".what-is");
-const animationItems = [groundLine, bush1, bush2, armadillo, house, tree1, smallBush1, treeMid, motto, tree2, sun, bcg, clouds, whatIs]
+const birds = document.querySelector(".birds");
+const animationItems = [groundLine, bush1, bush2, armadillo, house, tree1, smallBush1, treeMid, motto, tree2, sun, bcg, clouds, whatIs, birds]
 
 
 
