@@ -360,6 +360,15 @@ body {
   -webkit-transform: translate(-65%, -50%);
           transform: translate(-65%, -50%);
   font-size: 18px;
+  opacity: 1;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-delay: 4.5s;
+          transition-delay: 4.5s;
+}
+
+.landing .animation .ground .check.start {
+  opacity: 0;
 }
 
 .landing .animation .ground .check img {
