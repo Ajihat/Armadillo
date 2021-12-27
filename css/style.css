@@ -1138,4 +1138,36 @@ body {
     left: calc( 100% + 210px);
   }
 }
+
+.brands {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fffef9;
+  border-bottom: 1px solid #ff7043;
+}
+
+.brands__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1000px;
+  padding-bottom: 85px;
+}
+
+.brands__inner img {
+  width: 10%;
+}
 /*# sourceMappingURL=style.css.map */
