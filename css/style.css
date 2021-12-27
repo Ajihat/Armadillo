@@ -8,7 +8,6 @@
 }
 
 body {
-  width: 100%;
   max-width: 1980px;
   margin: 0 auto;
   overflow-x: hidden;
@@ -19,25 +18,18 @@ body {
 }
 
 .landing nav {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100px;
   -webkit-transition: top .3s;
   transition: top .3s;
   top: 0;
+  left: 0;
   z-index: 30;
 }
 
 .landing nav.hidden {
   top: -100px;
-}
-
-.landing nav.fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100px;
-  width: 100%;
 }
 
 .landing nav .nav_background {
@@ -50,7 +42,6 @@ body {
   border-bottom: solid 0px #ffd1c3;
   -webkit-transition: height .5s, border-bottom .5s;
   transition: height .5s, border-bottom .5s;
-  z-index: 0;
 }
 
 .landing nav .nav_background.on {
@@ -81,8 +72,6 @@ body {
           transform: translate(-50%, 0);
   width: 94%;
   height: 100px;
-  overflow-x: hidden;
-  overflow-y: hidden;
   z-index: 1;
   -webkit-transition: padding-bottom .5s;
   transition: padding-bottom .5s;
@@ -118,11 +107,12 @@ body {
 }
 
 .landing nav .nav_inside .menubar ul li {
-  position: relative;
+  display: block;
   height: 100%;
 }
 
 .landing nav .nav_inside .menubar ul li a {
+  position: relative;
   display: block;
   text-decoration: none;
   height: 100%;
@@ -137,6 +127,98 @@ body {
 
 .landing nav .nav_inside .menubar ul li a:hover {
   color: #ff7043;
+}
+
+.landing nav .nav_inside .menubar ul li a:hover .m1 {
+  display: block;
+}
+
+.landing nav .nav_inside .menubar ul li a .m1 {
+  position: absolute;
+  display: none;
+  padding: 25px 10px;
+  background-color: white;
+  width: 450px;
+  top: 42px;
+  left: 0;
+  border: 1px solid #ffd1c3;
+  -webkit-box-shadow: 0px 0px 25px -14px #ff7043;
+          box-shadow: 0px 0px 25px -14px #ff7043;
+  z-index: 10;
+}
+
+.landing nav .nav_inside .menubar ul li a .m1 .homeowners, .landing nav .nav_inside .menubar ul li a .m1 .landlords {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+}
+
+.landing nav .nav_inside .menubar ul li a .m1 .landlords {
+  margin-top: 40px;
+}
+
+.landing nav .nav_inside .menubar ul li a .m1 .homeowners__img, .landing nav .nav_inside .menubar ul li a .m1 .landlords__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  width: 30%;
+  height: 100%;
+}
+
+.landing nav .nav_inside .menubar ul li a .m1 .homeowners__img img, .landing nav .nav_inside .menubar ul li a .m1 .landlords__img img {
+  width: 77px;
+}
+
+.landing nav .nav_inside .menubar ul li a .m1 .homeowners__text, .landing nav .nav_inside .menubar ul li a .m1 .landlords__text {
+  width: 70%;
+}
+
+.landing nav .nav_inside .menubar ul li a .m1 .homeowners__text p, .landing nav .nav_inside .menubar ul li a .m1 .landlords__text p {
+  font-size: 16px;
+}
+
+.landing nav .nav_inside .menubar ul li a .m1 .homeowners__text button, .landing nav .nav_inside .menubar ul li a .m1 .landlords__text button {
+  padding: 20px 20px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-box-shadow: 0px 0px 55px -14px #ff7043;
+          box-shadow: 0px 0px 55px -14px #ff7043;
+  background-color: #ff7043;
+}
+
+.landing nav .nav_inside .menubar ul li a .m1 .homeowners__text button:hover, .landing nav .nav_inside .menubar ul li a .m1 .landlords__text button:hover {
+  background-color: #3f3350;
 }
 
 .landing nav .nav_inside .logo {
@@ -157,6 +239,10 @@ body {
 }
 
 .landing nav .nav_inside .buttons {
+  overflow-x: hidden;
+}
+
+.landing nav .nav_inside .buttons__inner {
   position: relative;
   left: 140px;
   display: -webkit-box;
@@ -181,7 +267,7 @@ body {
   transition: left .7s .5s;
 }
 
-.landing nav .nav_inside .buttons.moved {
+.landing nav .nav_inside .buttons__inner.moved {
   left: 0;
 }
 
@@ -1150,7 +1236,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: #fffef9;
-  border-bottom: 1px solid #ff7043;
+  border-bottom: 1px solid #ffd1c3;
 }
 
 .brands__inner {
@@ -1168,6 +1254,6 @@ body {
 }
 
 .brands__inner img {
-  width: 10%;
+  width: 13%;
 }
 /*# sourceMappingURL=style.css.map */

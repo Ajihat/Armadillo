@@ -5,27 +5,21 @@
     font-family: 'Inter', sans-serif
     color: $main-font
 body
-    width: 100%
     max-width: 1980px
     margin: 0 auto
     overflow-x: hidden
 .landing
     background-color: $beige
     nav
-        position: absolute
+        position: fixed
         width: 100%
         height: 100px
         transition: top .3s
         top: 0
+        left: 0
         z-index: 30
         &.hidden
             top: -100px
-        &.fixed
-            position: fixed
-            top: 0
-            left: 0
-            height: 100px
-            width: 100%
         .nav_background
             position: absolute
             top: 0
@@ -35,7 +29,6 @@ body
             background-color: white
             border-bottom: solid 0px $orange-nav
             transition: height .5s, border-bottom .5s
-            z-index: 0
             &.on
                 height: 100px
                 border-bottom: solid 1px $orange-nav
@@ -47,8 +40,6 @@ body
             transform: translate(-50%, 0)
             width: 94%
             height: 100px
-            overflow-x: hidden
-            overflow-y: hidden
             z-index: 1
             transition: padding-bottom .5s
             &.centered
@@ -61,9 +52,10 @@ body
                     height: 42px
                     padding: 0 15px
                     li
-                        position: relative
+                        display: block
                         height: 100%
                         a
+                            position: relative
                             display: block
                             text-decoration: none
                             height: 100%
@@ -75,6 +67,47 @@ body
                             transition: color .5s
                             &:hover
                                 color: $orange
+                            &:hover .m1
+                                display: block
+                            .m1
+                                position: absolute
+                                display: none
+                                padding: 25px 10px
+                                background-color: white
+                                width: 450px
+                                top: 42px
+                                left: 0
+                                border: 1px solid $orange-nav
+                                box-shadow: 0px 0px 25px -14px rgba(255, 112, 67, 1)
+                                z-index: 10
+                                .homeowners , .landlords
+                                    +positioning(flex,row,space-between,flex-start,no-wrap)
+                                .landlords
+                                    margin-top: 40px
+                                .homeowners__img, .landlords__img
+                                    +positioning(flex,row,center,flex-start,no-wrap)
+                                    width: 30%
+                                    height: 100%
+                                    img
+                                        width: 77px
+                                .homeowners__text, .landlords__text
+                                    width: 70%
+                                    p
+                                        font-size: 16px
+                                    button
+                                        padding: 20px 20px
+                                        background-color: transparent
+                                        border: none
+                                        color: white
+                                        font-size: 18px
+                                        border-radius: 5px
+                                        cursor: pointer
+                                        margin-top: 15px
+                                        transition: .5s
+                                        box-shadow: 0px 0px 55px -14px rgba(255, 112, 67, 1)
+                                        background-color: $orange
+                                        &:hover
+                                            background-color: $main-font
 
             .logo
                 position: relative
@@ -87,15 +120,17 @@ body
                         width: 148px
                         height: 30px
             .buttons
-                position: relative
-                left: 140px
-                +positioning(flex,row,space-between,center,no-wrap)
-                height: 44px
-                width: 370px
-                padding: 0 15px
-                transition: left .7s .5s
-                &.moved
-                    left: 0
+                overflow-x: hidden
+                &__inner
+                    position: relative
+                    left: 140px
+                    +positioning(flex,row,space-between,center,no-wrap)
+                    height: 44px
+                    width: 370px
+                    padding: 0 15px
+                    transition: left .7s .5s
+                    &.moved
+                        left: 0
                 button
                     height: 100%
                     padding: 0 14px
