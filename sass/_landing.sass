@@ -68,32 +68,101 @@ body
                             &:hover
                                 color: $orange
                             &:hover .m1
-                                display: block
+                                height: auto
+                                opacity: 1
+                                top: 42px
+                                padding: 35px 25px
+                                border: 1px solid $orange-nav
+                                transition: opacity 0.4s linear, top 0.2s ease-out,
                             .m1
                                 position: absolute
-                                display: none
-                                padding: 25px 10px
+                                opacity: 0
+                                height: 0
+                                overflow: hidden
+                                padding: 0
                                 background-color: white
                                 width: 450px
-                                top: 42px
+                                top: 20px
                                 left: 0
-                                border: 1px solid $orange-nav
+                                border: none
                                 box-shadow: 0px 0px 25px -14px rgba(255, 112, 67, 1)
                                 z-index: 10
                                 .homeowners , .landlords
                                     +positioning(flex,row,space-between,flex-start,no-wrap)
-                                .landlords
-                                    margin-top: 40px
+                                    padding: 10px
+                                .mid
+                                    margin: 40px 0
+                                .landlords:hover .landlords__text h4, .homeowners:hover .homeowners__text h4
+                                    color: $orange
                                 .homeowners__img, .landlords__img
+                                    position: relative
                                     +positioning(flex,row,center,flex-start,no-wrap)
                                     width: 30%
                                     height: 100%
+                                    overflow: hidden
                                     img
                                         width: 77px
+                                    .door
+                                        position: absolute
+                                        width: 12%
+                                        bottom: 5px
+                                        animation: door-rotation
+                                        animation-iteration-count: infinite
+                                        animation-duration: 5s
+                                        transform-origin: left
+                                        animation-timing-function: linear
+                                    .keys
+                                        animation-name: keys-rotation
+                                        animation-iteration-count: infinite
+                                        animation-duration: 2s
+                                    .sign-item
+                                        position: absolute
+                                        width: 30%
+                                        top: 12px
+                                        left: 50px
+                                        animation: sign-rotation
+                                        animation-iteration-count: infinite
+                                        animation-duration: 2.5s
+                                        transform-origin: center top
+                                        animation-timing-function: linear
+                                        animation-direction: reverse
+                                    .hand
+                                        position: relative
+                                        left: -8px
+                                        animation-name: keys-rotation
+                                        animation-iteration-count: infinite
+                                        animation-duration: 2s
+                                        transform-origin: bottom center
+                                    .snowflake
+                                        position: absolute
+                                        top: -50%
+                                        color: $main-font
+                                        animation: snowflake-drop
+                                        animation-duration: 3s
+                                        animation-iteration-count: infinite
+                                        animation-timing-function: linear
+                                    .snowflake:nth-child(2)
+                                        left: 15%
+                                        animation-delay: 1s
+                                    .snowflake:nth-child(3)
+                                        left: 35%
+                                        animation-delay: 2s
+                                    .snowflake:nth-child(4)
+                                        left: 55%
+                                        animation-delay: 3s
+                                    .snowflake:nth-child(5)
+                                        left: 75%
+                                        animation-delay: 4s
                                 .homeowners__text, .landlords__text
                                     width: 70%
+                                    margin-left: 15px
+                                    h4
+                                        font: 500 21px 'Zilla Slab', serif
+                                        transition: .3s
+                                        margin-bottom: 15px
                                     p
                                         font-size: 16px
+                                        line-height: 160%
                                     button
                                         padding: 20px 20px
                                         background-color: transparent
@@ -102,7 +171,8 @@ body
                                         font-size: 18px
                                         border-radius: 5px
                                         cursor: pointer
-                                        margin-top: 15px
+                                        margin-top: 20px
+                                        margin-bottom: 40px
                                         transition: .5s
                                         box-shadow: 0px 0px 55px -14px rgba(255, 112, 67, 1)
                                         background-color: $orange
@@ -522,6 +592,7 @@ body
             left: 0
             width: 110px
             transition: .3s
+
 @keyframes bush-move
     0%
         transform: rotate(-90deg)
@@ -613,3 +684,45 @@ body
         left: 0
     100%
         left: calc( 100% + 210px )
+
+@keyframes keys-rotation
+    0%
+        transform: rotate(0deg)
+    10%
+        transform: rotate(15deg)
+    20%
+        transform: rotate(-10deg)
+    30%
+        transform: rotate(6deg)
+    40%
+        transform: rotate(-4deg)
+    50%
+        transform: rotate(3deg)
+    60%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(0deg)
+
+@keyframes door-rotation
+    0%
+        transform: rotateY(0deg)
+    30%
+        transform: rotateY(75deg)
+    60%
+        transform: rotateY(75deg)
+    100%
+        transform: rotateY(0deg)
+
+@keyframes sign-rotation
+    0%
+        transform: rotateX(-40deg) rotateY(-5deg)
+    50%
+        transform: rotateX(0deg)
+    100%
+        transform: rotateX(40deg) rotateY(5deg)
+
+@keyframes snowflake-drop
+    0%
+        top: -50%
+    100%
+        top: 100%

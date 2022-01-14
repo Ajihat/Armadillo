@@ -1,0 +1,31 @@
+.offerings
+    +positioning(flex,column,center,center,no-wrap)
+    &__inner
+        padding: 100px 50px
+        width: 100%
+        max-width: 1200px
+    &__motto
+        text-align: center
+        & .title
+            position: relative
+            h1
+                position: relative
+                font: 500 21px/1.35 'Zilla Slab', serif
+                z-index: 2
+            .bcg
+                position: absolute
+                top: -5px
+                left: 50%
+                z-index: 1
+                width: 250px
+                height: 130%
+                transform: translateX(-50%)
+        h2
+            margin: 44px auto 0 auto
+            font: 400 60px/1.22 'Zilla Slab', serif
+            max-width: 800px
+        p
+            font-size: 22px
+            line-height: 1.8
+            margin: 20px auto 0 auto
+            max-width: 800px

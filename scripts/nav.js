@@ -6,6 +6,7 @@ const logo = document.querySelector(".logo img")
 
 
 
+
 window.addEventListener("scroll", function () {
     let scrollPosition = window.scrollY
     if (scrollPosition > 0) {
@@ -21,3 +22,4 @@ window.addEventListener("scroll", function () {
         logo.classList.remove("smaller")
     }
 })
+

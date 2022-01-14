@@ -130,18 +130,26 @@ body {
 }
 
 .landing nav .nav_inside .menubar ul li a:hover .m1 {
-  display: block;
+  height: auto;
+  opacity: 1;
+  top: 42px;
+  padding: 35px 25px;
+  border: 1px solid #ffd1c3;
+  -webkit-transition: opacity 0.4s linear, top 0.2s ease-out;
+  transition: opacity 0.4s linear, top 0.2s ease-out;
 }
 
 .landing nav .nav_inside .menubar ul li a .m1 {
   position: absolute;
-  display: none;
-  padding: 25px 10px;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
   background-color: white;
   width: 450px;
-  top: 42px;
+  top: 20px;
   left: 0;
-  border: 1px solid #ffd1c3;
+  border: none;
   -webkit-box-shadow: 0px 0px 25px -14px #ff7043;
           box-shadow: 0px 0px 25px -14px #ff7043;
   z-index: 10;
@@ -163,13 +171,19 @@ body {
           align-items: flex-start;
   -ms-flex-wrap: no-wrap;
       flex-wrap: no-wrap;
+  padding: 10px;
 }
 
-.landing nav .nav_inside .menubar ul li a .m1 .landlords {
-  margin-top: 40px;
+.landing nav .nav_inside .menubar ul li a .m1 .mid {
+  margin: 40px 0;
+}
+
+.landing nav .nav_inside .menubar ul li a .m1 .landlords:hover .landlords__text h4, .landing nav .nav_inside .menubar ul li a .m1 .homeowners:hover .homeowners__text h4 {
+  color: #ff7043;
 }
 
 .landing nav .nav_inside .menubar ul li a .m1 .homeowners__img, .landing nav .nav_inside .menubar ul li a .m1 .landlords__img {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -187,18 +201,122 @@ body {
       flex-wrap: no-wrap;
   width: 30%;
   height: 100%;
+  overflow: hidden;
 }
 
 .landing nav .nav_inside .menubar ul li a .m1 .homeowners__img img, .landing nav .nav_inside .menubar ul li a .m1 .landlords__img img {
   width: 77px;
 }
 
+.landing nav .nav_inside .menubar ul li a .m1 .homeowners__img .door, .landing nav .nav_inside .menubar ul li a .m1 .landlords__img .door {
+  position: absolute;
+  width: 12%;
+  bottom: 5px;
+  -webkit-animation: door-rotation;
+          animation: door-rotation;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.landing nav .nav_inside .menubar ul li a .m1 .homeowners__img .keys, .landing nav .nav_inside .menubar ul li a .m1 .landlords__img .keys {
+  -webkit-animation-name: keys-rotation;
+          animation-name: keys-rotation;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.landing nav .nav_inside .menubar ul li a .m1 .homeowners__img .sign-item, .landing nav .nav_inside .menubar ul li a .m1 .landlords__img .sign-item {
+  position: absolute;
+  width: 30%;
+  top: 12px;
+  left: 50px;
+  -webkit-animation: sign-rotation;
+          animation: sign-rotation;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  animation-direction: reverse;
+}
+
+.landing nav .nav_inside .menubar ul li a .m1 .homeowners__img .hand, .landing nav .nav_inside .menubar ul li a .m1 .landlords__img .hand {
+  position: relative;
+  left: -8px;
+  -webkit-animation-name: keys-rotation;
+          animation-name: keys-rotation;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+}
+
+.landing nav .nav_inside .menubar ul li a .m1 .homeowners__img .snowflake, .landing nav .nav_inside .menubar ul li a .m1 .landlords__img .snowflake {
+  position: absolute;
+  top: -50%;
+  color: #3f3350;
+  -webkit-animation: snowflake-drop;
+          animation: snowflake-drop;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.landing nav .nav_inside .menubar ul li a .m1 .homeowners__img .snowflake:nth-child(2), .landing nav .nav_inside .menubar ul li a .m1 .landlords__img .snowflake:nth-child(2) {
+  left: 15%;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.landing nav .nav_inside .menubar ul li a .m1 .homeowners__img .snowflake:nth-child(3), .landing nav .nav_inside .menubar ul li a .m1 .landlords__img .snowflake:nth-child(3) {
+  left: 35%;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.landing nav .nav_inside .menubar ul li a .m1 .homeowners__img .snowflake:nth-child(4), .landing nav .nav_inside .menubar ul li a .m1 .landlords__img .snowflake:nth-child(4) {
+  left: 55%;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.landing nav .nav_inside .menubar ul li a .m1 .homeowners__img .snowflake:nth-child(5), .landing nav .nav_inside .menubar ul li a .m1 .landlords__img .snowflake:nth-child(5) {
+  left: 75%;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
 .landing nav .nav_inside .menubar ul li a .m1 .homeowners__text, .landing nav .nav_inside .menubar ul li a .m1 .landlords__text {
   width: 70%;
+  margin-left: 15px;
+}
+
+.landing nav .nav_inside .menubar ul li a .m1 .homeowners__text h4, .landing nav .nav_inside .menubar ul li a .m1 .landlords__text h4 {
+  font: 500 21px 'Zilla Slab', serif;
+  -webkit-transition: .3s;
+  transition: .3s;
+  margin-bottom: 15px;
 }
 
 .landing nav .nav_inside .menubar ul li a .m1 .homeowners__text p, .landing nav .nav_inside .menubar ul li a .m1 .landlords__text p {
   font-size: 16px;
+  line-height: 160%;
 }
 
 .landing nav .nav_inside .menubar ul li a .m1 .homeowners__text button, .landing nav .nav_inside .menubar ul li a .m1 .landlords__text button {
@@ -209,7 +327,8 @@ body {
   font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 15px;
+  margin-top: 20px;
+  margin-bottom: 40px;
   -webkit-transition: .5s;
   transition: .5s;
   -webkit-box-shadow: 0px 0px 55px -14px #ff7043;
@@ -1225,6 +1344,162 @@ body {
   }
 }
 
+@-webkit-keyframes keys-rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  10% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  20% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  30% {
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
+  }
+  40% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  50% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+  60% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes keys-rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  10% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  20% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  30% {
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
+  }
+  40% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  50% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+  60% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes door-rotation {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  30% {
+    -webkit-transform: rotateY(75deg);
+            transform: rotateY(75deg);
+  }
+  60% {
+    -webkit-transform: rotateY(75deg);
+            transform: rotateY(75deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
+
+@keyframes door-rotation {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  30% {
+    -webkit-transform: rotateY(75deg);
+            transform: rotateY(75deg);
+  }
+  60% {
+    -webkit-transform: rotateY(75deg);
+            transform: rotateY(75deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
+
+@-webkit-keyframes sign-rotation {
+  0% {
+    -webkit-transform: rotateX(-40deg) rotateY(-5deg);
+            transform: rotateX(-40deg) rotateY(-5deg);
+  }
+  50% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(40deg) rotateY(5deg);
+            transform: rotateX(40deg) rotateY(5deg);
+  }
+}
+
+@keyframes sign-rotation {
+  0% {
+    -webkit-transform: rotateX(-40deg) rotateY(-5deg);
+            transform: rotateX(-40deg) rotateY(-5deg);
+  }
+  50% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(40deg) rotateY(5deg);
+            transform: rotateX(40deg) rotateY(5deg);
+  }
+}
+
+@-webkit-keyframes snowflake-drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes snowflake-drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
 .brands {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1255,5 +1530,67 @@ body {
 
 .brands__inner img {
   width: 13%;
+}
+
+.offerings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+}
+
+.offerings__inner {
+  padding: 100px 50px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.offerings__motto {
+  text-align: center;
+}
+
+.offerings__motto .title {
+  position: relative;
+}
+
+.offerings__motto .title h1 {
+  position: relative;
+  font: 500 21px/1.35 'Zilla Slab', serif;
+  z-index: 2;
+}
+
+.offerings__motto .title .bcg {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  z-index: 1;
+  width: 250px;
+  height: 130%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.offerings__motto h2 {
+  margin: 44px auto 0 auto;
+  font: 400 60px/1.22 'Zilla Slab', serif;
+  max-width: 800px;
+}
+
+.offerings__motto p {
+  font-size: 22px;
+  line-height: 1.8;
+  margin: 20px auto 0 auto;
+  max-width: 800px;
 }
 /*# sourceMappingURL=style.css.map */
