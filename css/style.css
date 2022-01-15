@@ -11,6 +11,7 @@ body {
   max-width: 1980px;
   margin: 0 auto;
   overflow-x: hidden;
+  height: 10000px;
 }
 
 .landing {
@@ -248,7 +249,8 @@ body {
           transform-origin: center top;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  animation-direction: reverse;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
 .landing nav .nav_inside .menubar ul li a .m1 .homeowners__img .hand, .landing nav .nav_inside .menubar ul li a .m1 .landlords__img .hand {
@@ -1553,7 +1555,7 @@ body {
 .offerings__inner {
   padding: 100px 50px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
 }
 
 .offerings__motto {
@@ -1592,5 +1594,179 @@ body {
   line-height: 1.8;
   margin: 20px auto 0 auto;
   max-width: 800px;
+}
+
+.offerings__items {
+  margin-top: 70px;
+}
+
+.offerings__items .item {
+  position: relative;
+  width: 400px;
+  height: auto;
+  cursor: pointer;
+  -webkit-transition: background-color .6s linear, height .6s ease-in-out;
+  transition: background-color .6s linear, height .6s ease-in-out;
+  padding: 25px 0;
+  height: 392px;
+}
+
+.offerings__items .item:hover {
+  background-color: #ffd740;
+  height: 540px;
+}
+
+.offerings__items .item:hover .text1 {
+  opacity: 0;
+}
+
+.offerings__items .item:hover .text2 {
+  height: auto;
+  opacity: 1;
+  padding: 0 0 20px 0;
+}
+
+.offerings__items .item__animation {
+  position: relative;
+  margin: 0 auto;
+  width: 165px;
+}
+
+.offerings__items .item__animation .meter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-80deg);
+          transform: translate(-50%, -50%) rotate(-80deg);
+  width: 18%;
+  -webkit-animation: meter-rotation;
+          animation: meter-rotation;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.offerings__items .item__name {
+  font: 400 28px/1.38 'Zilla Slab', serif;
+  margin: 25px 0 12px 0;
+  text-align: center;
+}
+
+.offerings__items .item__text {
+  position: relative;
+  text-align: center;
+}
+
+.offerings__items .item__text .text1 {
+  opacity: 1;
+  -webkit-transition: opacity linear .4s;
+  transition: opacity linear .4s;
+}
+
+.offerings__items .item__text .text1 p:first-of-type {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  max-width: 220px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+.offerings__items .item__text .text1 p:last-of-type {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #ff7043;
+  font-weight: 500;
+}
+
+.offerings__items .item__text .text2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: opacity .3s .4s linear;
+  transition: opacity .3s .4s linear;
+}
+
+.offerings__items .item__text .text2 ul {
+  list-style: none;
+  width: 100%;
+}
+
+.offerings__items .item__text .text2 ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.offerings__items .item__text .text2 ul li .tick {
+  width: 22%;
+}
+
+.offerings__items .item__text .text2 ul li p {
+  width: 78%;
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.offerings__items .item__text .text2 button {
+  padding: 21px 18px;
+  background-color: transparent;
+  border: 1px solid #ff7043;
+  color: white;
+  background-color: #ff7043;
+  margin-top: 24px;
+  font-size: 21px;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.offerings__items .item__text .text2 button:hover {
+  background-color: #3f3350;
+  border-color: #3f3350;
+}
+
+@-webkit-keyframes meter-rotation {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(-80deg);
+            transform: translate(-50%, -50%) rotate(-80deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(60deg);
+            transform: translate(-50%, -50%) rotate(60deg);
+  }
+}
+
+@keyframes meter-rotation {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(-80deg);
+            transform: translate(-50%, -50%) rotate(-80deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(60deg);
+            transform: translate(-50%, -50%) rotate(60deg);
+  }
 }
 /*# sourceMappingURL=style.css.map */
