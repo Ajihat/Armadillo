@@ -1683,7 +1683,7 @@ body {
           animation-iteration-count: infinite;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
-  nimation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
 }
 
 .offerings__items .item__animation .electric:nth-child(2) {
