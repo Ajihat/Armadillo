@@ -30,16 +30,21 @@
             margin: 20px auto 0 auto
             max-width: 800px
     &__items
-        +positioning(flex,row,space-between,flex-start,no-wrap)
+        position: relative
+        +positioning(flex,row,space-between,flex-start,wrap)
         margin-top: 70px
+        height: 950px
         .item
-            position: relative
+            position: absolute
+            top: 0
+            left: 0
             width: 400px
             height: auto
             cursor: pointer
             transition: background-color .6s linear, height .6s ease-in-out
             padding: 25px 0
             height: 392px
+            z-index: 2
             &:hover
                 background-color: $yellow-bcg
                 height: 540px
@@ -47,6 +52,10 @@
                 height: 500px
             &.plumbing:hover
                 height: 540px
+            &.kitchen:hover
+                height: 600px
+            &.laundry:hover
+                height: 460px
             &:hover .text1
                 opacity: 0
             &:hover .text2
@@ -118,6 +127,27 @@
                         top: 0%
                         left: 46%
                         transform: translateY(-100%)
+                .drawer
+                    position: absolute
+                    width: 45%
+                    bottom: 5%
+                    left: 27%
+                    transform: translateX(0px)
+                    animation: drawer-move
+                    animation-duration: 3s
+                    animation-timing-function: ease-in-out
+                    animation-iteration-count: infinite
+                    animation-direction: alternate
+                .spinner
+                    position: absolute
+                    top: 34%
+                    left: 32%
+                    width: 38%
+                    transform-origin: center center
+                    animation: spinner-move
+                    animation-timing-function: linear
+                    animation-iteration-count: infinite
+                    animation-duration: 5s
             &__name
                 font: 400 28px/1.38 'Zilla Slab', serif
                 margin: 25px 0 12px 0
@@ -176,6 +206,23 @@
                         &:hover
                             background-color: $main-font
                             border-color: $main-font
+        .electric
+            left: 50%
+            transform: translateX(-50%)
+            z-index: 2
+        .plumbing
+            left: initial
+            right: 0
+            z-index: 2
+        .kitchen
+            top: 50%
+            left: 16%
+            z-index: 1
+        .laundry
+            top: 50%
+            left: initial
+            right: 16%
+            z-index: 1
 
 @keyframes meter-rotation
     0%
@@ -205,3 +252,15 @@
         transform: translateY(-100%)
     100%
         transform: translateY(35%)
+
+@keyframes drawer-move
+    0%
+        transform: translateX(0px)
+    100%
+        transform: translateX(-20px)
+
+@keyframes spinner-move
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)

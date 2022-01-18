@@ -11,7 +11,6 @@ body {
   max-width: 1980px;
   margin: 0 auto;
   overflow-x: hidden;
-  height: 10000px;
 }
 
 .landing {
@@ -1597,6 +1596,7 @@ body {
 }
 
 .offerings__items {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1610,13 +1610,16 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -ms-flex-wrap: no-wrap;
-      flex-wrap: no-wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 70px;
+  height: 950px;
 }
 
 .offerings__items .item {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 400px;
   height: auto;
   cursor: pointer;
@@ -1624,6 +1627,7 @@ body {
   transition: background-color .6s linear, height .6s ease-in-out;
   padding: 25px 0;
   height: 392px;
+  z-index: 2;
 }
 
 .offerings__items .item:hover {
@@ -1637,6 +1641,14 @@ body {
 
 .offerings__items .item.plumbing:hover {
   height: 540px;
+}
+
+.offerings__items .item.kitchen:hover {
+  height: 600px;
+}
+
+.offerings__items .item.laundry:hover {
+  height: 460px;
 }
 
 .offerings__items .item:hover .text1 {
@@ -1683,7 +1695,7 @@ body {
           animation-iteration-count: infinite;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
-  animation-timing-function: ease-in-out;
+  nimation-timing-function: ease-in-out;
 }
 
 .offerings__items .item__animation .electric:nth-child(2) {
@@ -1757,6 +1769,42 @@ body {
   left: 46%;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
+}
+
+.offerings__items .item__animation .drawer {
+  position: absolute;
+  width: 45%;
+  bottom: 5%;
+  left: 27%;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-animation: drawer-move;
+          animation: drawer-move;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.offerings__items .item__animation .spinner {
+  position: absolute;
+  top: 34%;
+  left: 32%;
+  width: 38%;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-animation: spinner-move;
+          animation: spinner-move;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
 }
 
 .offerings__items .item__name {
@@ -1858,6 +1906,32 @@ body {
   border-color: #3f3350;
 }
 
+.offerings__items .electric {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 2;
+}
+
+.offerings__items .plumbing {
+  left: initial;
+  right: 0;
+  z-index: 2;
+}
+
+.offerings__items .kitchen {
+  top: 50%;
+  left: 16%;
+  z-index: 1;
+}
+
+.offerings__items .laundry {
+  top: 50%;
+  left: initial;
+  right: 16%;
+  z-index: 1;
+}
+
 @-webkit-keyframes meter-rotation {
   0% {
     -webkit-transform: translate(-50%, -50%) rotate(-80deg);
@@ -1949,6 +2023,50 @@ body {
   100% {
     -webkit-transform: translateY(35%);
             transform: translateY(35%);
+  }
+}
+
+@-webkit-keyframes drawer-move {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+}
+
+@keyframes drawer-move {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+}
+
+@-webkit-keyframes spinner-move {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-move {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 /*# sourceMappingURL=style.css.map */
