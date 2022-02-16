@@ -1,0 +1,50 @@
+.how
+    position: relative
+    +positioning(flex,column,center,center,no-wrap)
+    background-color: $beige
+    &__cloud-up
+        width: 100%
+    &__lower-cloud
+        position: relative
+        margin-top: 25px
+        width: 100%
+    &__cloud-down
+        width: 100%
+        animation: clouds-moving
+        animation-iteration-count: infinite
+        animation-timing-function: linear
+        animation-duration: 30s
+    &__cloud-down-absolute
+        position: absolute
+        width: 100%
+        top: 0
+        left: -100%
+        animation: clouds-moving
+        animation-iteration-count: infinite
+        animation-timing-function: linear
+        animation-duration: 30s
+    &__hide-left
+        position: absolute
+        width: 60%
+        height: 100%
+        background: linear-gradient(90deg, rgba(255,254,249,1) 50%, rgba(255,254,249,0) 100%)
+        top: 0
+        left: 0
+        z-index: 2
+    &__hide-right
+        position: absolute
+        width: 10%
+        height: 100%
+        top: 0
+        right: 0
+        background: linear-gradient(90deg, rgba(255,254,249,0) 0%, rgba(255,254,249,1) 68%)
+        z-index: 2
+    &__inner
+        max-width: 1400px
+        height: 600px
+
+@keyframes clouds-moving
+    0%
+        transform: translate(0%)
+    100%
+        transform: translate(100%)
