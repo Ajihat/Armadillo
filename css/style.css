@@ -1623,7 +1623,6 @@ body {
   left: 0;
   width: 400px;
   height: auto;
-  cursor: pointer;
   -webkit-transition: background-color .6s linear, height .6s ease-in-out;
   transition: background-color .6s linear, height .6s ease-in-out;
   padding: 25px 0;
@@ -2151,8 +2150,66 @@ body {
 }
 
 .how__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  width: 100%;
   max-width: 1400px;
-  height: 600px;
+}
+
+.how__motto {
+  width: 50%;
+}
+
+.how__motto .title {
+  position: relative;
+}
+
+.how__motto .title h1 {
+  position: relative;
+  font: 500 21px/1.35 'Zilla Slab', serif;
+  z-index: 2;
+}
+
+.how__motto .title .bcg {
+  position: absolute;
+  top: -5px;
+  left: 12%;
+  z-index: 1;
+  width: 220px;
+  height: 130%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.how__motto h2 {
+  font: 400 60px/1.22 'Zilla Slab', serif;
+  margin-top: 44px;
+  max-width: 340px;
+}
+
+.how__motto p {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.8;
+  font-size: 22px;
+  margin-top: 20px;
+  max-width: 460px;
+}
+
+.how__picture {
+  width: 50%;
 }
 
 @-webkit-keyframes clouds-moving {
