@@ -2170,7 +2170,9 @@ body {
 }
 
 .how__motto {
-  width: 50%;
+  width: 40%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .how__motto .title {
@@ -2186,7 +2188,7 @@ body {
 .how__motto .title .bcg {
   position: absolute;
   top: -5px;
-  left: 12%;
+  left: 22%;
   z-index: 1;
   width: 220px;
   height: 130%;
@@ -2209,7 +2211,14 @@ body {
 }
 
 .how__picture {
-  width: 50%;
+  width: 60%;
+}
+
+.how__img-base {
+  position: relative;
+  width: 140%;
+  bottom: 330px;
+  left: -85px;
 }
 
 @-webkit-keyframes clouds-moving {
