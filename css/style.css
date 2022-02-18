@@ -2170,6 +2170,7 @@ body {
 }
 
 .how__inner {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2247,6 +2248,49 @@ body {
   width: 100%;
   top: 31%;
   left: 20%;
+}
+
+.how__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  position: absolute;
+  width: 100%;
+  bottom: 4%;
+  -webkit-transform: translateX(-25px);
+          transform: translateX(-25px);
+}
+
+.how__contact .container {
+  width: 100%;
+  max-width: 700px;
+}
+
+.how__contact img {
+  -webkit-transform: rotate(140deg);
+          transform: rotate(140deg);
+}
+
+.how__text {
+  margin-left: 40px;
+}
+
+.how__text p {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
 @-webkit-keyframes clouds-moving {

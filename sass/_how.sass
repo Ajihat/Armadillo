@@ -44,6 +44,7 @@
         padding: 0px 60px
         width: 100%
     &__inner
+        position: relative
         +positioning(flex,row,space-between,center,no-wrap)
         width: 100%
         max-width: 1400px
@@ -88,7 +89,23 @@
         width: 100%
         top: 31%
         left: 20%
-
+    &__contact
+        +positioning(flex,row,center,center,no-wrap)
+        position: absolute
+        width: 100%
+        bottom: 4%
+        transform: translateX(-25px)
+        & .container
+            width: 100%
+            max-width: 700px
+        img
+            transform: rotate(140deg)
+    &__text
+        margin-left: 40px
+        p
+            text-align: center
+            margin-bottom: 10px
+            font-size: 18px
 @keyframes clouds-moving
     0%
         transform: translate(0%)
