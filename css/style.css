@@ -2190,7 +2190,7 @@ body {
 }
 
 .how__motto {
-  width: 40%;
+  width: 35%;
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
@@ -2208,7 +2208,7 @@ body {
 .how__motto .title .bcg {
   position: absolute;
   top: -5px;
-  left: 22%;
+  left: 30%;
   z-index: 1;
   width: 220px;
   height: 130%;
@@ -2232,20 +2232,20 @@ body {
 
 .how__picture {
   position: relative;
-  width: 60%;
+  width: 65%;
 }
 
 .how__img-base {
   position: relative;
   width: 140%;
-  bottom: 330px;
+  bottom: 365px;
   left: -85px;
 }
 
 .how__img-girl {
   position: absolute;
   width: 100%;
-  top: 30%;
+  top: 31%;
   left: 20%;
 }
 
