@@ -2170,7 +2170,7 @@ body {
           align-items: center;
   -ms-flex-wrap: no-wrap;
       flex-wrap: no-wrap;
-  padding: 0px 60px;
+  padding-left: 80px;
   width: 100%;
 }
 
