@@ -2209,7 +2209,7 @@ body {
 .how__motto .title .bcg {
   position: absolute;
   top: -5px;
-  left: 30%;
+  left: 43%;
   z-index: 1;
   width: 220px;
   height: 130%;
@@ -2268,7 +2268,7 @@ body {
       flex-wrap: no-wrap;
   position: absolute;
   width: 100%;
-  bottom: 4%;
+  bottom: 5%;
   -webkit-transform: translateX(-25px);
           transform: translateX(-25px);
 }
