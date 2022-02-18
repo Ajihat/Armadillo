@@ -222,22 +222,25 @@ body
                             background-color: $main-font
                             border-color: $main-font
     .motto
+        position: relative
         text-align: center
         width: 100%
-        max-width: 760px
         margin: 0 auto
         padding: 150px 40px 0px 40px
         opacity: 1
         transition: 1.5s
         transition-delay: 3.8s
-        z-index: 4
+        z-index: 5
         &.start
             opacity: 0
         h1
             font: 400 65px/1.22 'Zilla Slab', serif
-            margin-bottom: 15px
+            margin: 0 auto 15px auto
+            max-width: 760px
         p
             font: 400 22px/1.8 'Inter', sans-serif
+            max-width: 760px
+            margin: 0 auto 15px auto
         button
             position: relative
             margin-top: 30px
@@ -249,10 +252,13 @@ body
             border-radius: 8px
             box-shadow: 0px 0px 55px -14px rgba(255, 112, 67, 1)
             cursor: pointer
-            transition: .5s
+            opacity: 1
+            transition: background-color .5s
             z-index: 4
+            bottom: 0px
             &:hover
                 background-color: $main-font
+
             img
                 position: relative
                 top: 3px

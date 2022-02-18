@@ -422,9 +422,9 @@ body {
 }
 
 .landing .motto {
+  position: relative;
   text-align: center;
   width: 100%;
-  max-width: 760px;
   margin: 0 auto;
   padding: 150px 40px 0px 40px;
   opacity: 1;
@@ -432,7 +432,7 @@ body {
   transition: 1.5s;
   -webkit-transition-delay: 3.8s;
           transition-delay: 3.8s;
-  z-index: 4;
+  z-index: 5;
 }
 
 .landing .motto.start {
@@ -441,11 +441,14 @@ body {
 
 .landing .motto h1 {
   font: 400 65px/1.22 'Zilla Slab', serif;
-  margin-bottom: 15px;
+  margin: 0 auto 15px auto;
+  max-width: 760px;
 }
 
 .landing .motto p {
   font: 400 22px/1.8 'Inter', sans-serif;
+  max-width: 760px;
+  margin: 0 auto 15px auto;
 }
 
 .landing .motto button {
@@ -460,9 +463,11 @@ body {
   -webkit-box-shadow: 0px 0px 55px -14px #ff7043;
           box-shadow: 0px 0px 55px -14px #ff7043;
   cursor: pointer;
-  -webkit-transition: .5s;
-  transition: .5s;
+  opacity: 1;
+  -webkit-transition: background-color .5s;
+  transition: background-color .5s;
   z-index: 4;
+  bottom: 0px;
 }
 
 .landing .motto button:hover {
@@ -1526,7 +1531,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 1000px;
-  padding-bottom: 85px;
+  margin-bottom: 85px;
 }
 
 .brands__inner img {
