@@ -2149,6 +2149,26 @@ body {
   z-index: 2;
 }
 
+.how__outer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  padding: 0px 60px;
+  width: 100%;
+}
+
 .how__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2211,6 +2231,7 @@ body {
 }
 
 .how__picture {
+  position: relative;
   width: 60%;
 }
 
@@ -2219,6 +2240,13 @@ body {
   width: 140%;
   bottom: 330px;
   left: -85px;
+}
+
+.how__img-girl {
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  left: 20%;
 }
 
 @-webkit-keyframes clouds-moving {
