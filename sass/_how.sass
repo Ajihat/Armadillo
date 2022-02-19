@@ -2,6 +2,7 @@
     position: relative
     +positioning(flex,column,center,center,no-wrap)
     background-color: $beige
+    overflow-y: hidden
     &__cloud-up
         width: 100%
     &__lower-cloud
@@ -43,6 +44,7 @@
         +positioning(flex,row,center,center,no-wrap)
         padding-left: 80px
         width: 100%
+        margin-top: 80px
     &__inner
         position: relative
         +positioning(flex,row,space-between,center,no-wrap)
@@ -84,11 +86,13 @@
         width: 130%
         bottom: 365px
         left: -85px
+        z-index: 2
     &__img-girl
         position: absolute
         width: 100%
         top: 31%
         left: 20%
+        z-index: 3
     &__contact
         +positioning(flex,row,center,center,no-wrap)
         position: absolute
@@ -106,8 +110,56 @@
             text-align: center
             margin-bottom: 10px
             font-size: 18px
+    &__armadillo
+        position: absolute
+        width: 175px
+        top: -300px
+        left: 57%
+        transform-origin: top center
+        animation: parachute 2s ease-in-out infinite alternate-reverse, parachute-falling 12s linear infinite
+        z-index: 1
+        &.start
+            animation: none
+    &__armadillo-eye
+        position: absolute
+        top: 59%
+        left: 46.5%
+        width: 10px
+        height: 10px
+        background-color: transparent
+        animation: eye-movement
+        animation-duration: 3s
+        animation-iteration-count: infinite
+        animation-direction: alternate-reverse
+    &__armadillo-innereye
+        position: absolute
+        top: 0
+        left: 0
+        width: 50%
+        height: 50%
+        background-color: $main-font
+        border-radius: 50%
+
 @keyframes clouds-moving
     0%
         transform: translate(0%)
     100%
         transform: translate(100%)
+
+@keyframes eye-movement
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(-80deg)
+
+@keyframes parachute
+    0%
+        transform: rotate(5deg)
+    100%
+        transform: rotate(-5deg)
+
+@keyframes parachute-falling
+    0%
+        top: -300px
+    100%
+        top: 30%
